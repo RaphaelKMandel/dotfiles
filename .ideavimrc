@@ -1,0 +1,143 @@
+"SETTINGS"
+    set scrolloff=10
+    set incsearch
+    set number norelativenumber
+    set numberwidth=10
+    set ruler
+    set ignorecase
+    set showmode
+    set paste
+    set clipboard=unnamed
+    set clipboard+=ideaput
+
+
+"IDEAVIM PLUGINS"
+    plug 'machakann/vim-highlightedyank'
+    plug 'tpope/vim-commentary'
+    plug 'preservim/nerdtree'
+    plug 'terryma/vim-multiple-cursors'
+    plug 'vim-surround'
+    plug 'vim-scripts/argtextobj.vim'
+
+    set highlightedyank
+    set commentary
+    set nerdtree
+    set multiplecursors
+    set surround
+    set argtextobj
+    set which-key
+
+    "WhichKey Config"
+    set notimeout
+    "set timeoutlen = 50000"
+    let g:WhichKey_DefaultDelay = 1000
+    let g:WhichKey_ShowVimActions = "true"
+    let g:WhichKey_ShowTypedSequence = "false"
+    let g:WhichKey_SortOrder = "by_key_prefix_first"
+    let g:WhichKey_CommandColor = "green"
+    let g:WhichKey_FontSize = 16
+
+
+"INSERT MODE"
+    "Remove arrow keys"
+    imap <up> <Nop>
+    imap <down> <Nop>
+    imap <left> <Nop>
+    imap <right> <Nop>
+
+
+"NORMAL MODE"
+    "Remove arrow keys"
+    nmap <up> <Nop>
+    nmap <down> <Nop>
+    nmap <left> <Nop>
+    nmap <right> <Nop>
+
+    "Highlight search and auto disable"
+    nnoremap / :set hls<CR>/
+    nnoremap <esc> <esc>:set nohls<CR>
+
+    "Window Movement"
+    nnoremap \\ <C-w>s
+    nnoremap \| <C-w>v
+    nnoremap <C-l> <C-w>l
+    nnoremap <C-h> <C-w>h
+    nnoremap <C-j> <C-w>j
+    nnoremap <C-k> <C-w>k
+
+    "LSP Commands"
+    nnoremap gr :action RenameElement<CR>
+    nnoremap gd :action GotoDeclaration<CR>
+    nnoremap gs :action GotoSuperMethod<CR>
+
+    "Capital Y is y$"
+    nnoremap Y y$
+
+    "Remapping Control-R to capital U"
+    nnoremap U <C-r>
+
+    "Hold cursor location when joining
+    nnoremap J mzJ`z
+
+    "Search results in center of screen"
+    nnoremap n nzz
+    nnoremap N Nzz
+
+    "scrolling in center of screen"
+    nnoremap <C-d> <C-d>zz
+    nnoremap <C-u> <C-u>zz
+
+    "Inserting blank lines with enter"
+    nmap <C-o> o<esc>
+    nmap <A-o> O<esc>
+
+"VISUAL MODE"
+    "Up/Down"
+    vmap K :m-2<CR>gv=gv
+    vmap J :m'>+1<CR>gv=gv
+
+    "Left Right"
+    vmap < <gv
+    vmap > >gv
+
+
+
+"LEADER"
+    let mapleader = " "
+
+    "NORMAL MODE"
+    nmap <leader>ua :set norelativenumber<CR>
+    nmap <leader>un :set relativenumber<CR>
+
+    "Runs"
+    nnoremap <leader>~ :action Run<CR>
+    nnoremap <leader>` :action RunClass<CR>
+    nnoremap <leader><M-`> :action Debug<CR>
+    nnoremap <F2> :action ToggleLineBreakpoint<CR>
+
+    nnoremap <leader>e :NERDTreeToggle<CR>
+    nnoremap <F12> :action HideSideWindows<CR>
+
+    "Navigation"
+    nnoremap [[ :action MethodUp<CR>
+    nnoremap ]] :action MethodDown<CR>
+
+    "Macro shortcut
+    nmap Q @q
+    nmap <leader>q @q
+
+    nnoremap <leader>= :action ReformatCode<CR>
+
+    "Comments"
+    nmap <leader>/ yy P :action CommentByLineComment<CR> I<Esc>l
+
+    "Basic Actions"
+    nnoremap <leader>p "0p
+    nnoremap <leader>d "_d
+    nnoremap <leader>c "_c
+    nnoremap <leader>D dt)
+    nnoremap <leader>C ct)
+
+
+    nnoremap <leader>y _y$
+
