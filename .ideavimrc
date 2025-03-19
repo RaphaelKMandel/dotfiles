@@ -70,8 +70,24 @@
     nnoremap gd :action GotoDeclaration<CR>
     nnoremap gs :action GotoSuperMethod<CR>
 
-    "Capital Y is y$"
+    "Capital Y/V is y/v$"
     nnoremap Y y$
+    nnoremap V v$
+    nnoremap vv V
+
+    "S"
+    nnoremap s :s/
+    nnoremap S :%s/
+
+    "Around Buffer"
+    nnoremap yab mzggVGy`z
+    nnoremap dab ggVGd
+    nnoremap cab ggVGc
+    nnoremap vab ggVG
+
+    "L/H"
+    nnoremap H ^
+    nnoremap L g_
 
     "Remapping Control-R to capital U"
     nnoremap U <C-r>
@@ -87,9 +103,11 @@
     nnoremap <C-d> <C-d>zz
     nnoremap <C-u> <C-u>zz
 
-    "Inserting blank lines with enter"
-    nmap <C-o> o<esc>
-    nmap <A-o> O<esc>
+
+
+    "Macro shortcut
+    nmap Q @q
+
 
 "VISUAL MODE"
     "Up/Down"
@@ -97,8 +115,8 @@
     vmap J :m'>+1<CR>gv=gv
 
     "Left Right"
-    vmap < <gv
-    vmap > >gv
+    vnoremap < <gv
+    vnoremap > >gv
 
 
 
@@ -106,38 +124,40 @@
     let mapleader = " "
 
     "NORMAL MODE"
-    nmap <leader>ua :set norelativenumber<CR>
-    nmap <leader>un :set relativenumber<CR>
+        "Options"
+        nnoremap <leader>ua :set norelativenumber<CR>
+        nnoremap <leader>un :set relativenumber<CR>
 
+        "Plugins"
+        nnoremap <leader>e :NERDTreeToggle<CR>
+
+        "Basic Actions"
+        nnoremap <leader>p "0p
+        nnoremap <leader>d "_d
+        nnoremap <leader>c "_c
+        nnoremap <leader>D dt)
+        nnoremap <leader>C ct)
+
+        "Inserting blank lines and exiting insert mode"
+        nnoremap <leader>o o<esc>
+        nnoremap <leader>O O<esc>       nnoremap <leader>y _y$
+
+        "Comments"
+        nnoremap <leader>/ yyPgcc^l
+
+
+"Pycharm ACTIONS"
     "Runs"
     nnoremap <leader>~ :action Run<CR>
     nnoremap <leader>` :action RunClass<CR>
     nnoremap <leader><M-`> :action Debug<CR>
-    nnoremap <F2> :action ToggleLineBreakpoint<CR>
-
-    nnoremap <leader>e :NERDTreeToggle<CR>
-    nnoremap <F12> :action HideSideWindows<CR>
 
     "Navigation"
     nnoremap [[ :action MethodUp<CR>
-    nnoremap ]] :action MethodDown<CR>
+    nnoremap ]] :action MethodDown<CR>   nnoremap <F2> :action ToggleLineBreakpoint<CR>
 
-    "Macro shortcut
-    nmap Q @q
-    nmap <leader>q @q
-
+    "Functions"
     nnoremap <leader>= :action ReformatCode<CR>
 
-    "Comments"
-    nmap <leader>/ yy P :action CommentByLineComment<CR> I<Esc>l
-
-    "Basic Actions"
-    nnoremap <leader>p "0p
-    nnoremap <leader>d "_d
-    nnoremap <leader>c "_c
-    nnoremap <leader>D dt)
-    nnoremap <leader>C ct)
-
-
-    nnoremap <leader>y _y$
-
+    "Control"
+    nnoremap <F12> :action HideSideWindows<CR>
