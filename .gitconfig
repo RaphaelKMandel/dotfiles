@@ -1,3 +1,6 @@
 [user]
 	name = Raphael Mandel
 	email = raphael.k.mandel@gmail.com
+
+[pull]
+	rebase = true
