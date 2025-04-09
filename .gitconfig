@@ -8,3 +8,6 @@
 
 [alias]
 	loga = 'log --oneline --graph --all'
+	
+[credential]
+	helper = store
