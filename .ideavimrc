@@ -1,11 +1,14 @@
 "SETTINGS"
+    set visualbell
     set scrolloff=10
     set incsearch
+    set hlsearch
     set number norelativenumber
     set numberwidth=10
     set ruler
     set ignorecase
     set showmode
+    set showcmd
     set paste
     set clipboard=unnamed
     set clipboard+=ideaput
@@ -27,6 +30,7 @@
     set argtextobj
     set which-key
     set quickscope
+    set easymotion
 
     "WhichKey Config"
     set notimeout
@@ -39,20 +43,18 @@
     let g:WhichKey_FontSize = 16
 
 
-"INSERT MODE"
-    "Remove arrow keys"
-    imap <up> <Nop>
-    imap <down> <Nop>
-    imap <left> <Nop>
-    imap <right> <Nop>
+    "Quickscope Config"
+    "let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
+    let g:qs_primary_color = '#F67126'
+    let g:qs_secondary_color = '#F8F8F2'
 
 
 "NORMAL MODE"
     "Remove arrow keys"
-    nmap <up> <Nop>
-    nmap <down> <Nop>
-    nmap <left> <Nop>
-    nmap <right> <Nop>
+    "nmap <up> <Nop>
+    "nmap <down> <Nop>
+    "nmap <left> <Nop>
+    "nmap <right> <Nop>
 
     "Highlight search and auto disable"
     nnoremap / :set hls<CR>/
@@ -66,29 +68,17 @@
     nnoremap <C-j> <C-w>j
     nnoremap <C-k> <C-w>k
 
-    "LSP Commands"
-    nnoremap gr :action RenameElement<CR>
-    nnoremap gd :action GotoDeclaration<CR>
-    nnoremap gs :action GotoSuperMethod<CR>
-
-    "Capital Y/V is y/v$"
+    "Capital Y
     nnoremap Y y$
-    nnoremap V v$
-    nnoremap vv V
 
-    "S"
-    nnoremap s :s/
-    nnoremap S :%s/
+    "Around File"
+    nnoremap yaf mzggVGy`zzz
+    nnoremap daf ggVGd
+    nnoremap caf ggVGc
+    nnoremap vaf ggVG
 
-    "Around Buffer"
-    nnoremap yab mzggVGy`z
-    nnoremap dab ggVGd
-    nnoremap cab ggVGc
-    nnoremap vab ggVG
-
-    "L/H"
-    nnoremap H ^
-    nnoremap L g_
+    "Easier EOL"
+    map - $
 
     "Remapping Control-R to capital U"
     nnoremap U <C-r>
@@ -136,27 +126,78 @@
         nnoremap <leader>c "_c
         nnoremap <leader>D dt)
         nnoremap <leader>C ct)
+        nnoremap <leader>y _y$
 
         "Inserting blank lines and exiting insert mode"
         nnoremap <leader>o o<esc>
-        nnoremap <leader>O O<esc>       nnoremap <leader>y _y$
-
-        "Comments"
-        nnoremap <leader>/ yyPgcc^l
+        nnoremap <leader>O O<esc>
 
 
 "Pycharm ACTIONS"
     "Runs"
-    nnoremap <leader>~ :action Run<CR>
-    nnoremap <leader>` :action RunClass<CR>
-    nnoremap <leader><M-`> :action Debug<CR>
-
-    "Navigation"
-    nnoremap [[ :action MethodUp<CR>
-    nnoremap ]] :action MethodDown<CR>   nnoremap <F2> :action ToggleLineBreakpoint<CR>
+    map <leader>` :action Run<CR>
+    map <leader>~ :action RunClass<CR>
 
     "Functions"
+    map <leader>n :action NewScratchFile<CR>
     nnoremap <leader>= :action ReformatCode<CR>
 
-    "Control"
-    nnoremap <F12> :action HideSideWindows<CR>
+    "Debug"
+    map <F5> :action Debug<CR>
+    map <F6> :action Step<CR>
+    map <F2> :action ToggleLineBreakpoint<CR>
+
+    "LSP Commands"
+    map <leader>rn :action RenameElement<CR>
+    map <leader>rm :action ExtractMethod<CR>
+    map <leader>rv :action IntroduceVariable<CR>
+    map <leader>rf :action IntroduceField<CR>
+    map <leader>rs :action ChangeSignature<CR>
+    map <leader>ra :action ShowIntentionActions<CR>
+
+    "Go Commands"
+    map <leader>gd :action GotoDeclaration<CR>
+    map <leader>gy :action GotoTypeDeclaration<CR>
+    map <leader>gi :action GotoImplementation<CR>
+    map <leader>gs :action GotoSuperMethod<CR>
+    map <leader>gu :action ShowUsages<CR>
+
+    "Jumping"
+    nnoremap [[ :action MethodUp<CR>
+    nnoremap ]] :action MethodDown<CR>
+
+    "Finder"
+    map <leader>ff :action GotoFile<CR>
+    map <leader>fr :action RecentFiles<CR>
+    map <leader>fc :action FindInPath<CR>
+    map <leader>fl :action RecentLocations<CR>
+    map <leader>fa :action SearchEverywhere<CR>
+
+    "UI"
+    map <F12> :action HideSideWindows<CR>
+    map <leader>uf :action ToggleFullScreen<CR>
+    map <leader>q :action CloseContent<CR>
+
+    "GIT"
+    map <leader>gc :action CheckinProject<CR>
+    map <leader>gb :action Git.Branches<CR>
+    map <leader>gg :action ActivateVersionControlToolWindow<CR>
+
+    "Easy Motion"
+    " map s <Plug>(easymotion-s)
+    map s <Plug>(easymotion-w)
+    map S <Plug>(easymotion-b)
+
+    map <leader>s :source ~/.ideavimrc<CR>
+
+    "Popup Menus"
+    map <C-j> <down>
+    map <C-k> <up>
+
+    " Popup navigation
+    inoremap <C-j> <Action>(PopupMenu-selectNext)
+    inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+
+" How to make underline only -quickscope
+" C-j menu down
