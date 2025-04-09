@@ -1,1 +1,1 @@
-alias glo="git log --oneline --graph --all"
+source bashprofile.sh
