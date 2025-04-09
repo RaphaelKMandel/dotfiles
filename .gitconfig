@@ -2,12 +2,15 @@
 	name = Raphael Mandel
 	email = raphael.k.mandel@gmail.com
 
+[core]
+	editor = nvim
+
 [pull]
 	rebase = true
+
+[credential]
+	helper = store
 
 
 [alias]
 	loga = 'log --oneline --graph --all'
-	
-[credential]
-	helper = store
