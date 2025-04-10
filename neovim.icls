@@ -1888,44 +1888,44 @@
         <option name="FOREGROUND" value="f92672" />
       </value>
     </option>
+    <option name="YAML_ANCHOR">
+      <value>
+        <option name="FOREGROUND" value="2accf5" />
+      </value>
+    </option>
     <option name="YAML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="75715e" />
+        <option name="FOREGROUND" value="ccaaff" />
       </value>
     </option>
     <option name="YAML_SCALAR_DSTRING">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="YAML_SCALAR_KEY">
       <value>
-        <option name="FOREGROUND" value="f92672" />
+        <option name="FOREGROUND" value="2accf5" />
       </value>
     </option>
     <option name="YAML_SCALAR_LIST">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="YAML_SCALAR_STRING">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="YAML_SCALAR_VALUE">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
-      </value>
-    </option>
-    <option name="YAML_SIGN">
-      <value>
-        <option name="FOREGROUND" value="f92672" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="YAML_TEXT">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
+        <option name="FOREGROUND" value="cccc00" />
       </value>
     </option>
   </attributes>
