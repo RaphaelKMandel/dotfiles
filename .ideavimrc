@@ -185,8 +185,8 @@
 
     "Easy Motion"
     " map s <Plug>(easymotion-s)
-    map s <Plug>(easymotion-w)
-    map S <Plug>(easymotion-b)
+    "map s <Plug>(easymotion-w)
+    "map S <Plug>(easymotion-b)
 
     map <leader>s :source ~/.ideavimrc<CR>
 
