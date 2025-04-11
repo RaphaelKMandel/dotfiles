@@ -3,7 +3,7 @@
 	email = raphael.k.mandel@gmail.com
 
 [core]
-	editor = nvim
+	editor = vim
 
 [pull]
 	rebase = true
