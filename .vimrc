@@ -1,13 +1,3 @@
-"PLUGINS"
-	call plug#begin()
-		Plug 'preservim/NERDTree'
-		Plug 'machakann/vim-highlightedyank'
-		Plug 'tpope/vim-commentary'
-		Plug 'terryma/vim-multiple-cursors'
-		Plug 'liuchengxu/vim-which-key'
-	call plug#end()
-
-
 "SETTINGS"
 	set clipboard+=unnamed
 	set number 
@@ -15,7 +5,7 @@
 	set ruler
 	set ignorecase
 	set showmode
-	set paste
+	" set paste
 
 	set tabstop=4
 	set shiftwidth=4
@@ -51,6 +41,14 @@
 
     set termguicolors
 
+"PLUGINS"
+    call plug#begin()
+        Plug 'preservim/NERDTree'
+        Plug 'machakann/vim-highlightedyank'
+        Plug 'tpope/vim-commentary'
+        Plug 'terryma/vim-multiple-cursors'
+        Plug 'liuchengxu/vim-which-key'
+    call plug#end()
 
 "PLUGIN CONFIGURATION"
 	let g:highlightedyank_highlight_duration=200
@@ -60,12 +58,12 @@
     "WhichKey Config"
     set notimeout
     "set timeoutlen = 50000"
-    let g:WhichKey_DefaultDelay = 1000
-    let g:WhichKey_ShowVimActions = "true"
-    let g:WhichKey_ShowTypedSequence = "false"
-    let g:WhichKey_SortOrder = "by_key_prefix_first"
-    let g:WhichKey_CommandColor = "green"
-    let g:WhichKey_FontSize = 16
+    let g:WhichKey_DefaultDelay=1000
+    let g:WhichKey_ShowVimActions="true"
+    let g:WhichKey_ShowTypedSequence="false"
+    let g:WhichKey_SortOrder="by_key_prefix_first"
+    let g:WhichKey_CommandColor="green"
+    let g:WhichKey_FontSize=16
 
 
     "Quickscope Config"
@@ -108,7 +106,7 @@
     nnoremap <esc> <esc>:set nohls<CR>
 
     "Window Movement"
-    nnoremap \ <C-w>s
+    nnoremap \\ <C-w>s
     nnoremap \| <C-w>v
     nnoremap <C-l> <C-w>l
     nnoremap <C-h> <C-w>h
@@ -198,6 +196,8 @@
 	" BLACK = #000000
 	" LIGHTBLACK = #222222
 
+    colorscheme default
+
     highlight Normal guifg=#CCCCCC guibg=#10003a
     highlight NormalNC guifg=#CCCCCC guibg=#10003a
 
@@ -232,13 +232,13 @@
 
     "KEYWORDS
     highlight Keyword guifg=#2accf5
-    highlight Include guifg=#2accf5 "Import
-    highlight Typedef guifg=#2accf5 "Class
-    highlight Conditional guifg=#2accf5 "If
-    highlight Define guifg=#2accf5 "Define
-    highlight Repeat guifg=#2accf5 "For/while
-    highlight Exception guifg=#2accf5 "Try/Except
-    highlight Statement guifg=#2accf5  "General statement words
+    highlight Include guifg=#2accf5 "Import"
+    highlight Typedef guifg=#2accf5 "Class"
+    highlight Conditional guifg=#2accf5 "If"
+    highlight Define guifg=#2accf5 "Define"
+    highlight Repeat guifg=#2accf5 "For/while"
+    highlight Exception guifg=#2accf5 "Try/Except"
+    highlight Statement guifg=#2accf5  "General statement words"
 
     "FUNCTIONS
     highlight Type guifg=#a6e22e
