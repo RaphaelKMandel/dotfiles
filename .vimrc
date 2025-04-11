@@ -57,6 +57,30 @@
 	nnoremap <silent> <space> :silent WhichKey '<space>'<CR>
 
 
+    "WhichKey Config"
+    set notimeout
+    "set timeoutlen = 50000"
+    let g:WhichKey_DefaultDelay = 1000
+    let g:WhichKey_ShowVimActions = "true"
+    let g:WhichKey_ShowTypedSequence = "false"
+    let g:WhichKey_SortOrder = "by_key_prefix_first"
+    let g:WhichKey_CommandColor = "green"
+    let g:WhichKey_FontSize = 16
+
+
+    "Quickscope Config"
+    " let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
+    let g:qs_primary_color = '#F67126'
+    let g:qs_secondary_color = '#F8F8F2'
+    highlight QuickScopePrimary guifg='#F67126' gui=underline cterm=underline
+    highlight QuickScopeSecondary guifg='#F8F8F2' gui=underline cterm=underline
+
+    "Easy Motion"
+    "map s <Plug>(easymotion-s)
+    "map s <Plug>(easymotion-w)
+    "map S <Plug>(easymotion-b)
+
+
 "CURSOR CHANGE
     set ttimeout
     set ttimeoutlen=1
@@ -86,7 +110,7 @@
     nnoremap <esc> <esc>:set nohls<CR>
 
     "Window Movement"
-    nnoremap \\ <C-w>s
+    nnoremap \ <C-w>s
     nnoremap \| <C-w>v
     nnoremap <C-l> <C-w>l
     nnoremap <C-h> <C-w>h
