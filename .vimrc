@@ -29,7 +29,7 @@
     set ignorecase
     set smartcase
     set nohlsearch
-    set cursorline
+    " set cursorline
     set signcolumn=yes
 	set colorcolumn=120 "EOL
     set cmdheight=1
@@ -70,10 +70,8 @@
 
     "Quickscope Config"
     " let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
-    let g:qs_primary_color = '#F67126'
-    let g:qs_secondary_color = '#F8F8F2'
-    highlight QuickScopePrimary guifg='#F67126' gui=underline cterm=underline
-    highlight QuickScopeSecondary guifg='#F8F8F2' gui=underline cterm=underline
+    highlight QuickScopePrimary gui=bold,underline cterm=bold,underline
+    highlight QuickScopeSecondary gui=italic,underline cterm=italic,underline
 
     "Easy Motion"
     "map s <Plug>(easymotion-s)
@@ -207,7 +205,7 @@
     highlight TabLineSel guifg=#CCCCCC guibg=#10003a
     highlight MatchParen guifg=#2ACCF5 gui=underline
 
-    highlight CursorLine guibg=#444444
+    highlight CursorLine guibg=#444444 gui=NONE cterm=NONE
     highlight CursorLineNr guifg=#cccc00
     highlight LineNr guifg=#CCCCCC
     highlight WinSeparator  guifg=#2accf5
