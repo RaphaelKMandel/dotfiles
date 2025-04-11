@@ -1,5 +1,10 @@
 # Aliases
 alias act="source .venv/bin/activate"
+
+alias ga="git add ."
+alias gc="git commit"
+alias gac="git add . && git commit"
+alias gs="git status"
 alias glo="git log --oneline --graph --decorate"
 
 source ~/git-prompt.sh
