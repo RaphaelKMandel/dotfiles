@@ -5,6 +5,7 @@
 		Plug 'tpope/vim-commentary'
 		Plug 'terryma/vim-multiple-cursors'
 		Plug 'liuchengxu/vim-which-key'
+        Plug 'unblevable/quick-scope'
 	call plug#end()
 
 
