@@ -22,6 +22,32 @@
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
+    <option name="BASH.CONDITIONAL">
+      <value>
+        <option name="FOREGROUND" value="f67126" />
+        <option name="FONT_TYPE" value="3" />
+      </value>
+    </option>
+    <option name="BASH.EXTERNAL_COMMAND">
+      <value>
+        <option name="FOREGROUND" value="cccc00" />
+        <option name="BACKGROUND" value="272822" />
+      </value>
+    </option>
+    <option name="BASH.HERE_DOC">
+      <value>
+        <option name="FOREGROUND" value="ccaaff" />
+        <option name="BACKGROUND" value="272822" />
+      </value>
+    </option>
+    <option name="BASH.HERE_DOC_END" baseAttributes="DEFAULT_KEYWORD" />
+    <option name="BASH.HERE_DOC_START" baseAttributes="DEFAULT_KEYWORD" />
+    <option name="BASH.SHEBANG">
+      <value>
+        <option name="FOREGROUND" value="2accf5" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
     <option name="BREAKPOINT_ATTRIBUTES">
       <value>
         <option name="BACKGROUND" value="743d3d" />
@@ -789,18 +815,23 @@
     <option name="HAML_XHTML" baseAttributes="" />
     <option name="HTML_ATTRIBUTE_NAME">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FOREGROUND" value="2accf5" />
       </value>
     </option>
     <option name="HTML_ATTRIBUTE_VALUE">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
+        <option name="FOREGROUND" value="2accf5" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="HTML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="75715e" />
+        <option name="FOREGROUND" value="ccaaff" />
+      </value>
+    </option>
+    <option name="HTML_CUSTOM_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="HTML_ENTITY_REFERENCE">
@@ -809,10 +840,15 @@
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
-    <option name="HTML_TAG" baseAttributes="DEFAULT_TAG" />
+    <option name="HTML_TAG">
+      <value>
+        <option name="FOREGROUND" value="cccc00" />
+        <option name="BACKGROUND" value="272822" />
+      </value>
+    </option>
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="f92672" />
+        <option name="FOREGROUND" value="cccc00" />
       </value>
     </option>
     <option name="HYPERLINK_ATTRIBUTES">
@@ -1414,6 +1450,12 @@
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
+    <option name="REGEXP.BRACES" baseAttributes="DEFAULT_BRACES" />
+    <option name="REGEXP.BRACKETS" baseAttributes="DEFAULT_BRACKETS" />
+    <option name="REGEXP.CHAR_CLASS" baseAttributes="DEFAULT_ENTITY" />
+    <option name="REGEXP.ESC_CHARACTER" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
+    <option name="REGEXP.META" baseAttributes="DEFAULT_KEYWORD" />
+    <option name="REGEXP.PARENTHS" baseAttributes="DEFAULT_PARENTHS" />
     <option name="REST.EXPLICIT">
       <value>
         <option name="FOREGROUND" value="f92672" />
@@ -1859,33 +1901,35 @@
     </option>
     <option name="XML_ATTRIBUTE_NAME">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FOREGROUND" value="2accf5" />
       </value>
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
       <value>
-        <option name="FOREGROUND" value="e6db74" />
+        <option name="FOREGROUND" value="2accf5" />
       </value>
     </option>
-    <option name="XML_ENTITY_REFERENCE">
+    <option name="XML_CUSTOM_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="ae81ff" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
+    <option name="XML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
     <option name="XML_PROLOGUE">
       <value>
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="XML_TAG" baseAttributes="DEFAULT_TAG" />
-    <option name="XML_TAG_DATA">
+    <option name="XML_TAG">
       <value>
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="f67126" />
+        <option name="BACKGROUND" value="272822" />
       </value>
     </option>
+    <option name="XML_TAG_DATA" baseAttributes="TEXT" />
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="f92672" />
+        <option name="FOREGROUND" value="cccc00" />
       </value>
     </option>
     <option name="YAML_ANCHOR">
@@ -1926,6 +1970,12 @@
     <option name="YAML_TEXT">
       <value>
         <option name="FOREGROUND" value="cccc00" />
+      </value>
+    </option>
+    <option name="org.toml.DATE">
+      <value>
+        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
   </attributes>
