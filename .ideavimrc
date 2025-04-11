@@ -19,12 +19,12 @@
 
 
 "IDEAVIM PLUGINS"
-    " plug 'preservim/nerdtree'
-    " plug 'machakann/vim-highlightedyank'
-    " plug 'tpope/vim-commentary'
-    " plug 'terryma/vim-multiple-cursors'
-    " plug 'vim-surround'
-    " plug 'vim-scripts/argtextobj.vim'
+    plug 'preservim/nerdtree'
+    plug 'machakann/vim-highlightedyank'
+    plug 'tpope/vim-commentary'
+    plug 'terryma/vim-multiple-cursors'
+    plug 'vim-surround'
+    plug 'vim-scripts/argtextobj.vim'
 
     set highlightedyank
     set commentary
