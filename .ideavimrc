@@ -1,3 +1,7 @@
+"TODO"
+" How to make underline only -quickscope
+" C-j menu down
+
 "SETTINGS"
     set visualbell
     set scrolloff=10
@@ -48,6 +52,10 @@
     let g:qs_primary_color = '#F67126'
     let g:qs_secondary_color = '#F8F8F2'
 
+    "Easy Motion"
+    "map s <Plug>(easymotion-s)
+    "map s <Plug>(easymotion-w)
+    "map S <Plug>(easymotion-b)
 
 "NORMAL MODE"
     "Remove arrow keys"
@@ -134,6 +142,9 @@
 
 
 "Pycharm ACTIONS"
+    "Sourcing"
+    map <leader>s :source ~/.ideavimrc<CR>
+
     "Runs"
     map <leader>` :action Run<CR>
     map <leader>~ :action RunClass<CR>
@@ -183,13 +194,6 @@
     map <leader>gb :action Git.Branches<CR>
     map <leader>gg :action ActivateVersionControlToolWindow<CR>
 
-    "Easy Motion"
-    " map s <Plug>(easymotion-s)
-    "map s <Plug>(easymotion-w)
-    "map S <Plug>(easymotion-b)
-
-    map <leader>s :source ~/.ideavimrc<CR>
-
     "Popup Menus"
     map <C-j> <down>
     map <C-k> <up>
@@ -199,5 +203,3 @@
     inoremap <C-k> <Action>(PopupMenu-selectPrev)
 
 
-" How to make underline only -quickscope
-" C-j menu down

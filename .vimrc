@@ -5,7 +5,6 @@
 		Plug 'tpope/vim-commentary'
 		Plug 'terryma/vim-multiple-cursors'
 		Plug 'liuchengxu/vim-which-key'
-        Plug 'unblevable/quick-scope'
 	call plug#end()
 
 
@@ -177,6 +176,11 @@
 	nmap <leader><leader>] <leader>[
 	nmap <leader><leader>{ I{<Esc>A}<Esc>j
 	nmap <leader><leader>} <leader>{
+
+
+"VIM"
+    "Sourcing"
+    map <leader>s :source ~/.vimrc<CR>
 
 
 "COLORSCHEME
