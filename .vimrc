@@ -1,3 +1,12 @@
+"PLUGINS"
+    call plug#begin()
+        Plug 'preservim/NERDTree'
+        Plug 'machakann/vim-highlightedyank'
+        Plug 'tpope/vim-commentary'
+        Plug 'terryma/vim-multiple-cursors'
+        Plug 'liuchengxu/vim-which-key'
+    call plug#end()
+
 "SETTINGS"
 	set clipboard+=unnamed
 	set number 
@@ -41,14 +50,6 @@
 
     set termguicolors
 
-"PLUGINS"
-    call plug#begin()
-        Plug 'preservim/NERDTree'
-        Plug 'machakann/vim-highlightedyank'
-        Plug 'tpope/vim-commentary'
-        Plug 'terryma/vim-multiple-cursors'
-        Plug 'liuchengxu/vim-which-key'
-    call plug#end()
 
 "PLUGIN CONFIGURATION"
 	let g:highlightedyank_highlight_duration=200
@@ -68,8 +69,6 @@
 
     "Quickscope Config"
     " let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
-    highlight QuickScopePrimary gui=bold,underline cterm=bold,underline
-    highlight QuickScopeSecondary gui=underline cterm=underline
 
     "Easy Motion"
     "map s <Plug>(easymotion-s)
@@ -243,3 +242,8 @@
     "FUNCTIONS
     highlight Type guifg=#a6e22e
     highlight Function guifg=#a6e22e
+
+
+    "QUICKSCOPE SETTINGS"
+    highlight QuickScopePrimary gui=bold,underline cterm=bold,underline
+    highlight QuickScopeSecondary gui=underline cterm=underline
