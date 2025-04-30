@@ -53,10 +53,10 @@
     let g:qs_secondary_color = '#FF0000'
 
 
-    ""Easy Motion"
-    ""map s <Plug>(easymotion-s)
-    ""map s <Plug>(easymotion-w)
-    ""map S <Plug>(easymotion-b)
+    "Easy Motion"
+    "map s <Plug>(easymotion-s)
+    "map s <Plug>(easymotion-w)
+    "map S <Plug>(easymotion-b)
 
 "NORMAL MODE"
     "Remove arrow keys"
