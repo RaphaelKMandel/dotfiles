@@ -141,6 +141,10 @@
     "Macro shortcut
     nmap Q @q
 
+    "Buffer Navigation"
+    nmap ]b :bnext<CR>
+    nmap [b :bprev<CR>
+
 
 "VISUAL MODE"
     "Up/Down"
