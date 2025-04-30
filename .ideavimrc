@@ -14,7 +14,7 @@
     set showmode
     set showcmd
     set paste
-    set clipboard=unnamed
+    "set clipboard=unnamed  " This setting makes visual selection automatically copy stuff
     set clipboard+=ideaput
 
 
@@ -29,12 +29,12 @@
     set highlightedyank
     set commentary
     set nerdtree
-    set multiplecursors
     set surround
-    set argtextobj
     set which-key
     set quickscope
+    set multiplecursors
     set easymotion
+    set argtextobj
 
     "WhichKey Config"
     set notimeout
@@ -53,10 +53,10 @@
     let g:qs_secondary_color = '#FF0000'
 
 
-    "Easy Motion"
-    "map s <Plug>(easymotion-s)
-    "map s <Plug>(easymotion-w)
-    "map S <Plug>(easymotion-b)
+    ""Easy Motion"
+    ""map s <Plug>(easymotion-s)
+    ""map s <Plug>(easymotion-w)
+    ""map S <Plug>(easymotion-b)
 
 "NORMAL MODE"
     "Remove arrow keys"
@@ -85,6 +85,7 @@
     nnoremap daf ggVGd
     nnoremap caf ggVGc
     nnoremap vaf ggVG
+
 
     "Easier EOL"
     map - $
