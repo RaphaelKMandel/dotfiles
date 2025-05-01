@@ -209,7 +209,7 @@
     highlight MatchParen guifg=#2ACCF5 gui=underline
 
     highlight CursorLine guibg=#444444 gui=NONE cterm=NONE
-    highlight CursorLineNr guifg=#cccc00
+    highlight CursorLineNr guifg=#cccc00 gui=NONE cterm=NONE
     highlight LineNr guifg=#CCCCCC
     highlight WinSeparator  guifg=#2accf5
     highlight ColorColumn  guibg=#cccccc  "Divider at 120 chars
