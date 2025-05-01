@@ -102,7 +102,7 @@
 
     "Highlight search and auto disable"
     nnoremap / :set hls<CR>/
-    nnoremap <esc> <esc>:set nohls<CR>
+    nnoremap <esc><esc> <esc>:set nohls<CR>
 
     "Window Movement"
     nnoremap \\ <C-w>s
