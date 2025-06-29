@@ -154,6 +154,7 @@
     "Left Right"
     vnoremap < <gv
     vnoremap > >gv
+    vnoremap = =gv
 
 
 
