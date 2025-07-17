@@ -14,7 +14,7 @@
     set showmode
     set showcmd
     set paste
-    "set clipboard=unnamed  " This setting makes visual selection automatically copy stuff
+    set clipboard=unnamed  " This setting makes visual selection automatically copy stuff
     set clipboard+=ideaput
 
 
@@ -190,11 +190,18 @@
     map <F12> :action HideSideWindows<CR>
     map <leader>uf :action ToggleFullScreen<CR>
     map <leader>q :action CloseContent<CR>
+   "map <leader>q :action CloseContent<CR>
+    map <leader>q :action HideAllWindows<CR>
+    map <leader>t :action ActivateTerminalToolWindow<CR>
 
     "GIT"
     map <leader>gc :action CheckinProject<CR>
     map <leader>gb :action Git.Branches<CR>
     map <leader>gg :action ActivateVersionControlToolWindow<CR>
+    map <leader>gf :action Git.Fetch<CR>
+    map <leader>gp :action Git.Pull<CR>
+    map <leader>gP :action Vcs.Push<CR>
+    map <leader>gr :action Git.Rebase<CR>
 
     "Popup Menus"
     map <C-j> <down>
