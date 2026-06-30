@@ -1,0 +1,119 @@
+{
+  "vim.enable": true,
+  "vim.leader": " ",
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 200,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.smartcase": true,
+  "vim.scrolloff": 10,
+  "vim.showcmd": true,
+  "vim.surround": true,
+  "vim.commentary": true,
+  "vim.easymotion": true,
+  "editor.cursorSurroundingLines": 10,
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<Esc>"], "commands": [":nohl"] },
+
+    { "before": ["\\"], "commands": ["workbench.action.splitEditorDown"] },
+    { "before": ["|"], "commands": ["workbench.action.splitEditor"] },
+    { "before": ["<C-l>"], "commands": ["workbench.action.focusRightGroup"] },
+    { "before": ["<C-h>"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["<C-j>"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["<C-k>"], "commands": ["workbench.action.focusAboveGroup"] },
+
+    { "before": ["-"], "after": ["$"] },
+    { "before": ["Y"], "after": ["y", "$"] },
+    { "before": ["U"], "after": ["<C-r>"] },
+    { "before": ["Q"], "after": ["@", "q"] },
+    { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
+    { "before": ["n"], "after": ["n", "z", "z"] },
+    { "before": ["N"], "after": ["N", "z", "z"] },
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+
+    { "before": ["y", "a", "f"], "after": ["m", "z", "g", "g", "V", "G", "y", "`", "z", "z", "z"] },
+    { "before": ["d", "a", "f"], "after": ["g", "g", "V", "G", "d"] },
+    { "before": ["c", "a", "f"], "after": ["g", "g", "V", "G", "c"] },
+    { "before": ["v", "a", "f"], "after": ["g", "g", "V", "G"] },
+
+    { "before": ["<leader>", "p"], "after": ["\"", "0", "p"] },
+    { "before": ["<leader>", "d"], "after": ["\"", "_", "d"] },
+    { "before": ["<leader>", "c"], "after": ["\"", "_", "c"] },
+    { "before": ["<leader>", "D"], "after": ["d", "t", ")"] },
+    { "before": ["<leader>", "C"], "after": ["c", "t", ")"] },
+    { "before": ["<leader>", "y"], "after": ["_", "y", "$"] },
+    { "before": ["<leader>", "o"], "after": ["o", "<Esc>"] },
+    { "before": ["<leader>", "O"], "after": ["O", "<Esc>"] },
+
+    { "before": ["<leader>", "u", "a"], "commands": ["editor.action.toggleLineNumbers"] },
+    { "before": ["<leader>", "u", "n"], "commands": ["editor.action.toggleLineNumbers"] },
+    { "before": ["<leader>", "u", "f"], "commands": ["workbench.action.toggleFullScreen"] },
+
+    { "before": ["<leader>", "e"], "commands": ["workbench.view.explorer"] },
+
+    { "before": ["<leader>", "s"], "commands": ["workbench.action.files.revert"] },
+    { "before": ["<leader>", "`"], "commands": ["python.execInTerminal"] },
+    { "before": ["<leader>", "~"], "commands": ["python.execInTerminal"] },
+    { "before": ["<leader>", "n"], "commands": ["workbench.action.files.newUntitledFile"] },
+    { "before": ["<leader>", "="], "commands": ["editor.action.formatDocument"] },
+    { "before": ["<leader>", "q"], "commands": ["workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
+
+    { "before": ["<F5>"],  "commands": ["workbench.action.debug.start"] },
+    { "before": ["<F6>"],  "commands": ["workbench.action.debug.stepOver"] },
+    { "before": ["<F2>"],  "commands": ["editor.debug.action.toggleBreakpoint"] },
+    { "before": ["<F12>"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+
+    { "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"] },
+    { "before": ["<leader>", "r", "m"], "commands": ["editor.action.refactor"] },
+    { "before": ["<leader>", "r", "v"], "commands": ["editor.action.codeAction"], "args": { "kind": "refactor.extract.variable" } },
+    { "before": ["<leader>", "r", "f"], "commands": ["editor.action.codeAction"], "args": { "kind": "refactor.extract.constant" } },
+    { "before": ["<leader>", "r", "s"], "commands": ["editor.action.changeSignature"] },
+    { "before": ["<leader>", "r", "a"], "commands": ["editor.action.quickFix"] },
+
+    { "before": ["<leader>", "g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["<leader>", "g", "y"], "commands": ["editor.action.goToTypeDefinition"] },
+    { "before": ["<leader>", "g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["<leader>", "g", "s"], "commands": ["editor.action.goToSuper"] },
+    { "before": ["<leader>", "g", "u"], "commands": ["editor.action.goToReferences"] },
+
+    { "before": ["[", "["], "commands": ["editor.action.marker.prevInFiles"] },
+    { "before": ["]", "]"], "commands": ["editor.action.marker.nextInFiles"] },
+
+    { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "f", "r"], "commands": ["workbench.action.openRecent"] },
+    { "before": ["<leader>", "f", "c"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "f", "l"], "commands": ["workbench.action.gotoLine"] },
+    { "before": ["<leader>", "f", "a"], "commands": ["workbench.action.showAllSymbols"] },
+
+    { "before": ["<leader>", "g", "c"], "commands": ["git.commit"] },
+    { "before": ["<leader>", "g", "b"], "commands": ["git.checkout"] },
+    { "before": ["<leader>", "g", "g"], "commands": ["workbench.view.scm"] },
+    { "before": ["<leader>", "g", "f"], "commands": ["git.fetch"] },
+    { "before": ["<leader>", "g", "p"], "commands": ["git.pull"] },
+    { "before": ["<leader>", "g", "P"], "commands": ["git.push"] },
+    { "before": ["<leader>", "g", "r"], "commands": ["git.rebase"] },
+
+    { "before": ["z", "="], "commands": ["editor.action.quickFix"] }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["-"], "after": ["$"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["<"], "after": ["<", "g", "v"] },
+    { "before": [">"], "after": [">", "g", "v"] },
+    { "before": ["="], "after": ["=", "g", "v"] }
+  ],
+
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    { "before": ["-"], "after": ["$"] }
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}

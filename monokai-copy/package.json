@@ -1,0 +1,14 @@
+{
+     "name": "monokai-copy",
+     "displayName": "Monokai Copy",
+     "version": "1.0.0",
+     "engines": { "vscode": "^1.0.0" },
+     "categories": ["Themes"],
+     "contributes": {
+       "themes": [{
+         "label": "Monokai Copy",
+         "uiTheme": "vs-dark",
+         "path": "./monokai-copy.json"
+       }]
+     }
+}
